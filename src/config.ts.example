@@ -1,0 +1,36 @@
+export = {
+  "botToken": "ODg0MTQyMzU1NzQ4MzY4NDM2.YTULvA.yd0t_SHjZHnMgRjXtJGRFixQJHI",
+  "modules": ["Utility", "Fun", "Admin"],
+  "playing": "setting up!",
+  //"mongodbURI": "mongodb+srv://app:YO86q5H923cV74xk@lovebot-6973dca5.mongo.ondigitalocean.com/bloombot?authSource=admin&replicaSet=lovebot&tls=true&tlsCAFile=./certs/ca-certificate.crt",
+  "mongodbURI": "mongodb+srv://app:YO86q5H923cV74xk@lovebot-6973dca5.mongo.ondigitalocean.com/ataraxia?authSource=admin&replicaSet=lovebot&tls=true&tlsCAFile=./certs/ca-certificate.crt",
+  "mongodbDatabase": "ataraxia",
+  "reminderScanInterval": 30000,
+  "min_stars": 1,
+  "channels": {
+    "welcome": "",
+    "reportchannel": "",
+    "starchannel": "",
+    "logs": "",
+    "patreon": "",
+    "gate": ""
+  },
+    "roles": {
+      "patreon": "",
+      "separators": [
+        "929487883662946354",
+        "929487893272092745",
+        "929487895478296587",
+        "929496896068808754",
+        "929496901634642051"
+      ]
+    },
+  "emotes": {
+    "wave": "👋",
+    "report": "",
+    "star": "⭐",
+  },
+  "colors": {
+    "embedColor": 0x8f8fff
+  }
+}
