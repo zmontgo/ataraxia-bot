@@ -1,5 +1,4 @@
 import { BotStats, Prefixes, ServerSetup } from '../databaseFiles/connect';
-import { reactionCheckAction } from '../eventActions/reactions';
 import { Permissions } from 'discord.js';
 
 export = async (client, message) => {
@@ -87,6 +86,4 @@ export = async (client, message) => {
       }
     }
   }
-
-  reactionCheckAction.checkIfCorrect(message);
 };
