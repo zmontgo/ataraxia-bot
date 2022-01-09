@@ -14,22 +14,21 @@ export = async (client, member) => {
   const welcomePanel = new Discord.MessageEmbed()
     .setColor(config.colors.embedColor)
     .setTitle('🌛 __**Welcome to Ataraxia!**__ 🌛')
-    .setDescription('**We\'ve set up a short process to protect our community. It\'s a three-step process that usually takes less than a minute, we look forward to chatting with you!**')
+    .setDescription('**We\'ve set up a short process to protect our community. It usually takes less than a minute.**')
     .addField(
-      'Step One',
-      'Click the `Complete` button at the bottom of the screen. This will allow you to send messages here and allow you to move on to step two.'
-    )
-    .addField(
-      'Step Two',
-      `Then, introduce yourself here! Be sure to mention all of the following:
+      'Introduce Yourself',
+      `Be sure to mention all of the following:
   > • What you'd like to be called.
   > • Your age (or whether you're over or under 18).
   > • How you found this server.
   > • What you hope to get out of the community.`
     )
     .addField(
-      'Step Three',
-      'Finally, make sure to ping the <@&863442752582058024> role to gain the Member role and join the server!'
+      'Ping Staff',
+      'Make sure to ping the <@&863442752582058024> role to gain the Member role and join the server!'
+    )
+    .setFooter(
+      'If you have any issues with this process, please DM <@515919653445304345>.'
     );
 
   return await member.guild.channels.cache
