@@ -11,7 +11,7 @@ export = async (client, member) => {
     .setColor(config.colors.embedColor);
   client.channels.cache.get(config.channels.logs).send(embed);
 
-  let welcomePanel = new Discord.MessageEmbed()
+  const welcomePanel = new Discord.MessageEmbed()
     .setColor(config.colors.embedColor)
     .setTitle('🌛 __**Welcome to Ataraxia!**__ 🌛')
     .setDescription('**We\'ve set up a short process to protect our community. It\'s a three-step process that usually takes less than a minute, we look forward to chatting with you!**')
@@ -33,8 +33,8 @@ export = async (client, member) => {
     );
 
   return await member.guild.channels.cache
-  .get(config.channels.gate)
-  .send(`<@!${member.id}>`, {
-    embeds: [ welcomePanel ],
-  });
+    .get(config.channels.gate)
+    .send(`<@!${member.id}>`, {
+      embeds: [ welcomePanel ],
+    });
 };
