@@ -17,11 +17,7 @@ export = async (client, member) => {
     .setDescription('**We\'ve set up a short process to protect our community. It usually takes less than a minute.**')
     .addField(
       'Introduce Yourself',
-      `Be sure to mention all of the following:
-  > • What you'd like to be called.
-  > • Your age (or whether you're over or under 18).
-  > • How you found this server.
-  > • What you hope to get out of the community.`
+      `Be sure to mention all of the following:\n> • What you'd like to be called.\n> • Your age (or whether you're over or under 18).\n> • How you found this server.\n> • What you hope to get out of the community.`
     )
     .addField(
       'Ping Staff',
