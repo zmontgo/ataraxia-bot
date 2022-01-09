@@ -2,7 +2,7 @@ import config from '../config';
 import Discord from 'discord.js';
 
 export = async (client, member) => {
-  if (member.user.bot) return;
+  if (member.user.bot || !member.roles.cache.some(role => role.id === config.roles.member)) return;
 
   const embed = new Discord.MessageEmbed();
   embed.author = {
