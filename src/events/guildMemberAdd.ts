@@ -24,7 +24,7 @@ export = async (client, member) => {
       'Make sure to ping the <@&863442752582058024> role to gain the Member role and join the server!'
     )
     .setFooter(
-      'If you have any issues with this process, please DM <@515919653445304345>.'
+      'If you have any issues with this process, please DM a staff member. We\'ll be happy to help!'
     );
 
   return await member.guild.channels.cache
