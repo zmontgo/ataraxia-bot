@@ -35,6 +35,6 @@ export = async (client, member) => {
   return await member.guild.channels.cache
   .get(config.channels.gate)
   .send(`<@!${member.id}>`, {
-    embed: welcomePanel,
+    embeds: [ welcomePanel ],
   });
 };
