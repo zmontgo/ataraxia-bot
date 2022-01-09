@@ -1,5 +1,5 @@
 export = {
-  "botToken": "ODg0MTQyMzU1NzQ4MzY4NDM2.YTULvA.yd0t_SHjZHnMgRjXtJGRFixQJHI",
+  "botToken": "123",
   "modules": ["Utility", "Fun", "Admin"],
   "playing": "setting up!",
   //"mongodbURI": "mongodb+srv://app:YO86q5H923cV74xk@lovebot-6973dca5.mongo.ondigitalocean.com/bloombot?authSource=admin&replicaSet=lovebot&tls=true&tlsCAFile=./certs/ca-certificate.crt",

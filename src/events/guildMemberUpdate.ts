@@ -13,13 +13,24 @@ export = async (client, oldMember, newMember) => {
       .send({embeds: [ patreonMsg ]});
   }
 
-  if (oldMember.pending && !newMember.pending) {
+  
+  if (newMember.roles.cache.some(role => role.id === config.roles.member) && !oldMember.roles.cache.some(role => role.id === config.roles.member)) {
+    config.roles.separators.forEach(async (separator) => {
+      try {
+        const separatorRole = newMember.guild.roles.cache.find(role => role.id === separator);
+
+        await newMember.roles.add(separatorRole);
+      } catch(err) {
+        console.log(err);
+      }
+    });
+
     try {
       // Add roles and send welcome message to the welcome channel
       newMember.guild.channels.cache
         .get(config.channels.welcome)
         .send(
-          `:tada: **A new member has arrived!** :tada:\nPlease welcome <@${newMember.id}> to Ataraxia <@&929522638202740746>!\nWe're glad you've joined us.`
+          `🎉 **A new member has arrived!** 🎉\nPlease welcome <@${newMember.id}> to the **Prayer Room Discord** <@&${config.roles.welcome}> team!\nWe're so glad you've joined. :blush:`
         )
         .then((message) => {
           message.react(config.emotes.wave);
